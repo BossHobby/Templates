@@ -1,0 +1,555 @@
+[
+  {
+    "name": "Fractal 65",
+    "author": "Fractal Engineering",
+    "desc": "Customizable template for the Fractal 65 - Make sure to check motor rotation before sending it!",
+    "options": [
+      {
+        "name": "fc",
+        "title": "Flight Controller",
+        "entries": [
+          {
+            "name": "cross_f4_elrs",
+            "title": "Happymodel Cross F4 ELRS",
+            "desc": "Happymodel Cross F4 ELRS (Upside-Down)",
+            "file": "setup/Fractal_65/fc/cross_f4_elrs.option.yaml"
+          },
+          {
+            "name": "diamond_f4_elrs",
+            "title": "Happymodel Diamond F4 ELRS",
+            "desc": "Happymodel Diamond F4 with SPI elrs (Upside-Down)",
+            "file": "setup/Fractal_65/fc/diamond_f4_elrs.option.yaml"
+          },
+          {
+            "name": "diamond_f4_frsky",
+            "title": "Happymodel Diamond F4 FrSky",
+            "desc": "Happymodel Diamond F4 with SPI frsky (Upside-Down)",
+            "file": "setup/Fractal_65/fc/diamond_f4_frsky.option.yaml"
+          },
+          {
+            "name": "superbee_f4_elrs",
+            "title": "Happymodel Superbee F4 ELRS",
+            "desc": "Happymodel Superbee F4 ELRS (Upside-Down)",
+            "file": "setup/Fractal_65/fc/superbee_f4_elrs.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "gyro",
+        "title": "Gyro",
+        "default": "default",
+        "entries": [
+          {
+            "name": "bmi270",
+            "title": "BMI270",
+            "desc": "The Bad",
+            "selector": {
+              "gyro_name": [
+                "BMI270"
+              ]
+            },
+            "file": "setup/Fractal_65/gyro/bmi270.option.yaml"
+          },
+          {
+            "name": "default",
+            "title": "Default",
+            "desc": "The Good - for every other gyros (MPU6000, ICM20689, etc...)",
+            "file": "setup/Fractal_65/gyro/default.option.yaml"
+          },
+          {
+            "name": "icm42688p",
+            "title": "ICM42688P",
+            "desc": "The Ugly",
+            "selector": {
+              "gyro_name": [
+                "ICM42688P"
+              ]
+            },
+            "file": "setup/Fractal_65/gyro/icm42688p.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "vtx",
+        "title": "VTX type",
+        "entries": [
+          {
+            "name": "hdzero",
+            "title": "HDZero",
+            "desc": "HDZero over MSP (Uart 2 on all except Cross F4 on Uart 1)",
+            "file": "setup/Fractal_65/vtx/hdzero.option.yaml"
+          },
+          {
+            "name": "onboard_vtx",
+            "title": "Onboard/External Analog VTX",
+            "desc": "Onboard or External Analog VTX (Uart 2)",
+            "file": "setup/Fractal_65/vtx/onboard.option.yaml"
+          }
+        ]
+      }
+    ],
+    "mutations": [
+      {
+        "name": "Gyro modifiers",
+        "options": [
+          {
+            "name": "df4_icm42688p",
+            "selector": {
+              "fc": [
+                "diamond_f4_elrs",
+                "diamond_f4_frsky"
+              ],
+              "gyro": [
+                "icm42688p"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 48
+              }
+            }
+          },
+          {
+            "name": "x12_bmi270",
+            "selector": {
+              "fc": [
+                "x12_elrs"
+              ],
+              "gyro": [
+                "bmi270"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 36
+              }
+            }
+          },
+          {
+            "name": "superbee_bmi270",
+            "selector": {
+              "fc": [
+                "superbee_f4_elrs"
+              ],
+              "gyro": [
+                "bmi270"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 36
+              }
+            }
+          },
+          {
+            "name": "CrossF4_HDZero Uart",
+            "selector": {
+              "fc": [
+                "cross_f4_elrs"
+              ],
+              "vtx": [
+                "hdzero"
+              ]
+            },
+            "profile": {
+              "serial": {
+                "hdzero": 1
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "category": "setup",
+    "profile": "setup/Fractal_65/profile.yaml",
+    "image": "setup/Fractal_65/image.jpg"
+  },
+  {
+    "name": "Fractal 75",
+    "author": "Fractal Engineering",
+    "desc": "Customizable template for the Fractal 75 - Make sure to check motor rotation before sending it!",
+    "options": [
+      {
+        "name": "fc",
+        "title": "Flight Controller",
+        "entries": [
+          {
+            "name": "cross_f4_elrs",
+            "title": "Happymodel Cross F4 ELRS",
+            "desc": "Happymodel Cross F4 ELRS (Upside-Down)",
+            "file": "setup/Fractal_75/fc/cross_f4_elrs.option.yaml"
+          },
+          {
+            "name": "diamond_f4_elrs",
+            "title": "Happymodel Diamond F4 ELRS",
+            "desc": "Happymodel Diamond F4 with SPI elrs (Upside-Down)",
+            "file": "setup/Fractal_75/fc/diamond_f4_elrs.option.yaml"
+          },
+          {
+            "name": "diamond_f4_frsky",
+            "title": "Happymodel Diamond F4 FrSky",
+            "desc": "Happymodel Diamond F4 with SPI frsky (Upside-Down)",
+            "file": "setup/Fractal_75/fc/diamond_f4_frsky.option.yaml"
+          },
+          {
+            "name": "happymodel_f4_elrs",
+            "title": "Happymodel F4 ELRS",
+            "desc": "Happymodel F4 ELRS (Upside-Down)",
+            "file": "setup/Fractal_75/fc/f4_elrs.option.yaml"
+          },
+          {
+            "name": "superbee_f4_elrs",
+            "title": "Happymodel Superbee F4 ELRS",
+            "desc": "Happymodel Superbee F4 ELRS (Upside-Down)",
+            "file": "setup/Fractal_75/fc/superbee_f4_elrs.option.yaml"
+          },
+          {
+            "name": "happymodel_x12_elrs",
+            "title": "Happymodel X12 & X12 Lite ELRS",
+            "desc": "Happymodel X12 & X12 Lite ELRS (Upside-Down)",
+            "file": "setup/Fractal_75/fc/x12_elrs.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "gyro",
+        "title": "Gyro",
+        "default": "default",
+        "entries": [
+          {
+            "name": "bmi270",
+            "title": "BMI270",
+            "desc": "The Bad",
+            "selector": {
+              "gyro_name": [
+                "BMI270"
+              ]
+            },
+            "file": "setup/Fractal_75/gyro/bmi270.option.yaml"
+          },
+          {
+            "name": "default",
+            "title": "Default",
+            "desc": "The Good - for every other gyros (MPU6000, ICM20689, etc...)",
+            "file": "setup/Fractal_75/gyro/default.option.yaml"
+          },
+          {
+            "name": "icm42688p",
+            "title": "ICM42688P",
+            "desc": "The Ugly",
+            "selector": {
+              "gyro_name": [
+                "ICM42688P"
+              ]
+            },
+            "file": "setup/Fractal_75/gyro/icm42688p.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "vtx",
+        "title": "VTX type",
+        "entries": [
+          {
+            "name": "hdzero",
+            "title": "HDZero",
+            "desc": "HDZero over MSP (Uart 2 on all except Cross F4 on Uart 1)",
+            "file": "setup/Fractal_75/vtx/hdzero.option.yaml"
+          },
+          {
+            "name": "onboard_vtx",
+            "title": "Onboard/External Analog VTX",
+            "desc": "Onboard or External Analog VTX (Uart 2)",
+            "file": "setup/Fractal_75/vtx/onboard.option.yaml"
+          }
+        ]
+      }
+    ],
+    "mutations": [
+      {
+        "name": "Gyro modifiers",
+        "options": [
+          {
+            "name": "df4_icm42688p",
+            "selector": {
+              "fc": [
+                "diamond_f4_elrs",
+                "diamond_f4_frsky"
+              ],
+              "gyro": [
+                "icm42688p"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 48
+              }
+            }
+          },
+          {
+            "name": "x12_bmi270",
+            "selector": {
+              "fc": [
+                "x12_elrs"
+              ],
+              "gyro": [
+                "bmi270"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 36
+              }
+            }
+          },
+          {
+            "name": "superbee_bmi270",
+            "selector": {
+              "fc": [
+                "superbee_f4_elrs"
+              ],
+              "gyro": [
+                "bmi270"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 36
+              }
+            }
+          },
+          {
+            "name": "CrossF4_HDZero Uart",
+            "selector": {
+              "fc": [
+                "cross_f4_elrs"
+              ],
+              "vtx": [
+                "hdzero"
+              ]
+            },
+            "profile": {
+              "serial": {
+                "hdzero": 1
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "category": "setup",
+    "profile": "setup/Fractal_75/profile.yaml",
+    "image": "setup/Fractal_75/image.jpg"
+  },
+  {
+    "name": "Fractal Wingman",
+    "author": "Fractal Engineering",
+    "desc": "Customizable template for the Fractal Wingman - Make sure to check motor rotation before sending it!",
+    "options": [
+      {
+        "name": "fc",
+        "title": "Flight Controller",
+        "entries": [
+          {
+            "name": "happymodel_f4_elrs",
+            "title": "Happymodel F4 ELRS",
+            "desc": "Happymodel F4 ELRS (USB facing forwards and down)",
+            "file": "setup/Fractal_Wingman/fc/f4_elrs.option.yaml"
+          },
+          {
+            "name": "happymodel_x12_elrs",
+            "title": "Happymodel X12 ELRS",
+            "desc": "Happymodel X12 ELRS (USB facing forwards and down)",
+            "file": "setup/Fractal_Wingman/fc/x12_elrs.option.yaml"
+          },
+          {
+            "name": "happymodel_x12_elrs",
+            "title": "Happymodel X12 Lite ELRS",
+            "desc": "Happymodel X12 Lite ELRS (Normal orientation)",
+            "file": "setup/Fractal_Wingman/fc/x12_lite_elrs.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "gyro",
+        "title": "Gyro",
+        "default": "default",
+        "entries": [
+          {
+            "name": "bmi270",
+            "title": "BMI270",
+            "desc": "The Bad",
+            "selector": {
+              "gyro_name": [
+                "BMI270"
+              ]
+            },
+            "file": "setup/Fractal_Wingman/gyro/bmi270.option.yaml"
+          },
+          {
+            "name": "default",
+            "title": "Default",
+            "desc": "The Good - for every other gyros (MPU6000, ICM20689, etc...)",
+            "file": "setup/Fractal_Wingman/gyro/default.option.yaml"
+          },
+          {
+            "name": "icm42688p",
+            "title": "ICM42688P",
+            "desc": "The Ugly",
+            "selector": {
+              "gyro_name": [
+                "ICM42688P"
+              ]
+            },
+            "file": "setup/Fractal_Wingman/gyro/icm42688p.option.yaml"
+          }
+        ]
+      },
+      {
+        "name": "vtx",
+        "title": "VTX type",
+        "entries": [
+          {
+            "name": "hdzero",
+            "title": "HDZero",
+            "desc": "HDZero over MSP (Uart 1)",
+            "file": "setup/Fractal_Wingman/vtx/hdzero.option.yaml"
+          },
+          {
+            "name": "onboard_vtx",
+            "title": "Onboard/External Analog VTX",
+            "desc": "Onboard or External Analog VTX (Uart 2)",
+            "file": "setup/Fractal_Wingman/vtx/onboard.option.yaml"
+          }
+        ]
+      }
+    ],
+    "mutations": [
+      {
+        "name": "Gyro modifiers",
+        "options": [
+          {
+            "name": "df4_icm42688p",
+            "selector": {
+              "fc": [
+                "diamond_f4_elrs",
+                "diamond_f4_frsky"
+              ],
+              "gyro": [
+                "icm42688p"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 48
+              }
+            }
+          },
+          {
+            "name": "x12_bmi270",
+            "selector": {
+              "fc": [
+                "x12_elrs"
+              ],
+              "gyro": [
+                "bmi270"
+              ]
+            },
+            "profile": {
+              "motor": {
+                "gyro_orientation": 36
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "category": "setup",
+    "profile": "setup/Fractal_Wingman/profile.yaml",
+    "image": "setup/Fractal_Wingman/image.jpg"
+  },
+  {
+    "name": "Mobthicc",
+    "author": "Heads & Chaotix",
+    "desc": "Heads InfinityLoops Fractal75 setup inverted Happymodel Diamond F4, HGLRC 0802 25000kv, gemfan 40mm bi blades, 450mah 1s",
+    "category": "setup",
+    "profile": "setup/Mobthicc/profile.yaml",
+    "image": "setup/Mobthicc/image.jpg"
+  },
+  {
+    "name": "Mobula6",
+    "author": "Chaotix",
+    "desc": "Happymodel CrazybeeF4spi-ELRS Mobula6 bnf version only (reversed fc)",
+    "category": "setup",
+    "profile": "setup/Mobula6/profile.yaml",
+    "image": "setup/Mobula6/image.jpg"
+  },
+  {
+    "name": "NBD 75",
+    "author": "Cap'nFPV",
+    "desc": "Newbeedrone Cockroach 75 frame w/Betafpv F4 1S 5A serial elrs and HM SE802 2500KV",
+    "category": "setup",
+    "profile": "setup/NBD_75_Cockroach/profile.yaml",
+    "image": "setup/NBD_75_Cockroach/image.jpg"
+  },
+  {
+    "name": "Pilot Rates",
+    "author": "the community",
+    "desc": "Get your favorite pilot rates applied in one click!",
+    "options": [
+      {
+        "name": "pilot",
+        "title": "Choose your pilot",
+        "entries": [
+          {
+            "name": "Avasian",
+            "title": "Avasian",
+            "desc": "Avasian Betaflight rates",
+            "file": "setup/Pilot_Rates/pilot/avasian.option.yaml"
+          },
+          {
+            "name": "chaotix",
+            "title": "Chaotix",
+            "desc": "Chaotix actual rates",
+            "file": "setup/Pilot_Rates/pilot/chaotix.option.yaml"
+          },
+          {
+            "name": "fractal",
+            "title": "Fractal",
+            "desc": "Fractal actual rates",
+            "file": "setup/Pilot_Rates/pilot/fractal.option.yaml"
+          },
+          {
+            "name": "hanfer",
+            "title": "Hanfer",
+            "desc": "Hanfer actual rates",
+            "file": "setup/Pilot_Rates/pilot/hanfer.option.yaml"
+          },
+          {
+            "name": "Heads",
+            "title": "Heads",
+            "desc": "Heads betaflight rates",
+            "file": "setup/Pilot_Rates/pilot/heads.option.yaml"
+          },
+          {
+            "name": "Tyrantt",
+            "title": "Tyrantt",
+            "desc": "Tyrantt actual rates",
+            "file": "setup/Pilot_Rates/pilot/tyrantt.option.yaml"
+          }
+        ]
+      }
+    ],
+    "category": "setup",
+    "profile": "setup/Pilot_Rates/profile.yaml",
+    "image": "setup/Pilot_Rates/image.jpg"
+  },
+  {
+    "name": "PMB Mobeetle 6 eLRS",
+    "author": "PMB",
+    "desc": "Project Mockingbird Acro and Angle tune for the Mobeetle 6 eLRS version running tri-blade HQ props on 702 23,0000kv motors.",
+    "category": "setup",
+    "profile": "setup/PMB_Mobeetle_6/profile.yaml",
+    "image": "setup/PMB_Mobeetle_6/image.jpg"
+  }
+]
