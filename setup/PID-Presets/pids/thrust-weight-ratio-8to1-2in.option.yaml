@@ -2,6 +2,7 @@ name: thrust-weigt-ratio-8to1-2in
 title: Thrust/Weight Ratio <8:1 2in
 desc: 
 
+profile:
 pid:
   pid_profile: 0
   pid_rates:

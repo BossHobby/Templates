@@ -2,6 +2,7 @@ name: thrust-weigt-ratio-12to1-4in
 title: Thrust/Weight Ratio 12:1 4in
 desc: 
 
+profile:
 pid:
   pid_profile: 0
   pid_rates:

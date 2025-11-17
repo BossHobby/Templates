@@ -2,6 +2,7 @@ name: 7mm-brushed-micro
 title: 7mm brushed micro
 desc: 
 
+profile:
 pid:
   pid_profile: 0
   pid_rates:

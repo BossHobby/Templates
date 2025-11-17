@@ -2,6 +2,7 @@ name: 65mm-1s-brushless-whoop
 title: 65mm 1s brushless whoop
 desc: 
 
+profile:
 pid:
   pid_profile: 0
   pid_rates:

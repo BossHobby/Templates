@@ -2,6 +2,7 @@ name: thrust-weigt-ratio-10to1-3in
 title: Thrust/Weight Ratio 10:1 3in
 desc: 
 
+profile:
 pid:
   pid_profile: 0
   pid_rates:
