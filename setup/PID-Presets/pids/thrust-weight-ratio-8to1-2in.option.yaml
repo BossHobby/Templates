@@ -1,0 +1,19 @@
+name: thrust-weigt-ratio-8to1-2in
+title: Thrust/Weight Ratio <8:1 2in
+desc: 
+
+pid:
+  pid_profile: 0
+  pid_rates:
+    - kp:
+        - 91
+        - 91
+        - 78.5
+      ki:
+        - 77
+        - 77
+        - 77
+      kd:
+        - 54
+        - 54
+        - 6
