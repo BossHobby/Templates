@@ -1,0 +1,19 @@
+name: 7mm-brushed-micro
+title: 7mm brushed micro
+desc: 
+
+pid:
+  pid_profile: 0
+  pid_rates:
+    - kp:
+        - 122.5
+        - 122.5
+        - 298
+      ki:
+        - 60
+        - 60
+        - 40
+      kd:
+        - 128.5
+        - 128.5
+        - 24

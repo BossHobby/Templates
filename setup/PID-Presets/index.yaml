@@ -1,0 +1,8 @@
+name: PID Presets
+author: guac-squad
+desc: Get the PID preset for your build if there is no suitable template for you. This template will change the pid presets, nothing else. These PIDs are a good starting point to get your build in the air!
+
+options:
+  - name: pids
+    title: Choose your PIDs on the size and thrust to weight ratio of your build.
+    
