@@ -1,7 +1,6 @@
 name: 6-and-7mm-brushed-whoop
 title: 6mm & 7mm brushed whoop (Alienwhoop ZERO)
-desc: 6mm & 7mm brushed whoop (Alienwhoop ZERO)
-
+desc: kp 135  135  135    ki 70  75  75    kd 89  89  66
 profile:
   pid:
     pid_profile: 0

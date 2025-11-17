@@ -1,6 +1,6 @@
 name: 7mm-brushed-micro
 title: 7mm brushed micro
-desc: 7mm brushed micro
+desc: kp 122,5  122,5  298    ki 60  60  40    kd 1287,5  128,5  24
 
 profile:
   pid:

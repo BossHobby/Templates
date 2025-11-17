@@ -1,6 +1,6 @@
 name: thrust-weigt-ratio-14to1-5in
 title: Thrust/Weight Ratio 14:1 5in
-desc: Thrust/Weight Ratio 14:1 5in
+desc: kp 54  54  56    ki 77  77  77    kd 33  33  4
 
 profile:
   pid:
