@@ -1,20 +1,20 @@
 name: 75mm-1s-brushless-whoop
 title: 75mm 1s brushless whoop
-desc: 
+desc: 75mm 1s brushless whoop
 
 profile:
-pid:
-  pid_profile: 0
-  pid_rates:
-    - kp:
-        - 127
-        - 127
-        - 128
-      ki:
-        - 77
-        - 77
-        - 77
-      kd:
-        - 101
-        - 101
-        - 13
+  pid:
+    pid_profile: 0
+    pid_rates:
+      - kp:
+          - 127
+          - 127
+          - 128
+        ki:
+          - 77
+          - 77
+          - 77
+        kd:
+          - 101
+          - 101
+          - 13
