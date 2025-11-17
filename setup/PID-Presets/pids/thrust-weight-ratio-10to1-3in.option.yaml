@@ -1,6 +1,6 @@
 name: thrust-weigt-ratio-10to1-3in
 title: Thrust/Weight Ratio 10:1 3in
-desc: Thrust/Weight Ratio 10:1 3in
+desc: kp 81  81  78    ki 77  77  77    kd 44  44  6
 
 profile:
   pid:

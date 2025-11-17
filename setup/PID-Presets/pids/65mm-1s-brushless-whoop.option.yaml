@@ -1,6 +1,6 @@
 name: 65mm-1s-brushless-whoop
 title: 65mm 1s brushless whoop
-desc: 65mm 1s brushless whoop
+desc: kp 108  108  118    ki 77  77  77    kd 68  68  12
 
 profile:
   pid:
